@@ -1,0 +1,876 @@
+﻿<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Isaac Reang is a full-stack web developer building scalable web applications with Flask, JavaScript, and modern UI design."
+    />
+<meta name="keywords" content="Isaac Reang, Web Developer, Flask Developer, Portfolio, Fullstack Developer India" />
+<meta name="author" content="Isaac Reang" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=(), browsing-topics=(), interest-cohort=()"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#070d1f" />
+    <meta property="og:title" content="Isaac Reang | Web Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack web developer building fast, scalable, and user-focused web applications."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Isaac Reang | Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Full-stack web developer building fast, scalable, and user-focused web applications."
+    />
+    <title>Isaac Reang | Web Developer</title>
+    <link rel="icon" type="image/svg+xml" href="/fevicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="build.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="selection:bg-primary-container selection:text-white">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- TopAppBar -->
+    <header
+      class="site-header fixed top-0 w-full z-50 h-[72px] backdrop-blur-xl border-b"
+    >
+      <div
+        class="flex justify-between items-center px-8 max-w-7xl mx-auto h-full gap-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center flex-shrink-0 gap-2">
+          <img
+            loading="lazy" 
+            src="/img/portfolio-logo.png"
+            alt="Isaac Reang Logo"
+            class="h-8 w-auto max-w-[140px] object-contain block"
+          />
+        </div>
+
+        <!-- Nav -->
+        <nav
+          aria-label="Primary navigation"
+          class="hidden md:flex gap-8 items-center flex-shrink-0"
+        >
+          <a href="#about" class="nav-link" rel="noopener noreferrer">About</a>
+          <a href="#projects" class="nav-link" rel="noopener noreferrer">Projects</a>
+          <a href="#skills" class="nav-link" rel="noopener noreferrer">Skills</a>
+          <label class="theme-picker" aria-label="Theme mode selector">
+            <span
+              class="material-symbols-outlined theme-picker-icon"
+              aria-hidden="true"
+              >contrast</span
+            >
+            <span class="theme-picker-label">Theme</span>
+            <select data-theme-select aria-label="Choose theme">
+              <option value="default">Default</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+          <a
+            class="btn-primary bg-gradient-to-r from-[#9492ff] to-[#6760fd] px-6 py-2 rounded-full text-white font-semibold"
+            href="#contact"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile button -->
+        <button
+          id="menu-btn"
+          class="theme-icon-button md:hidden"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+      </div>
+    </header>
+    <div
+      id="mobile-menu"
+      aria-label="Mobile navigation"
+      class="site-mobile-menu fixed top-[72px] left-0 w-full backdrop-blur-xl border-t hidden flex-col px-6 py-8 space-y-6 z-40 md:hidden"
+    >
+      <a href="#about" class="mobile-nav-link text-lg" rel="noopener noreferrer">About</a>
+      <a href="#projects" class="mobile-nav-link text-lg" rel="noopener noreferrer"
+        >Projects</a
+      >
+      <a href="#skills" class="mobile-nav-link text-lg" rel="noopener noreferrer"
+        >Skills</a
+      >
+      <label class="theme-picker theme-picker--mobile" aria-label="Theme mode selector">
+        <span
+          class="material-symbols-outlined theme-picker-icon"
+          aria-hidden="true"
+          >contrast</span
+        >
+        <span class="theme-picker-label">Theme</span>
+        <select data-theme-select aria-label="Choose theme">
+          <option value="default">Default</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+
+      <a
+        href="#contact"
+        class="btn-primary mt-4 inline-block text-center bg-gradient-to-r from-[#9492ff] to-[#6760fd] px-6 py-3 rounded-xl text-white font-semibold"
+        rel="noopener noreferrer"
+      >
+        Contact
+      </a>
+    </div>
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-screen flex items-center pt-[72px] overflow-hidden fade-in"
+      >
+        <div class="grid-bg">
+          <canvas id="particles"></canvas>
+        </div>
+        <div class="absolute inset-0 pointer-events-none">
+          <div
+            class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"
+          ></div>
+          <div
+            class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-secondary-container/30 rounded-full blur-[140px]"
+          ></div>
+        </div>
+        <div
+          class="hero-content relative max-w-7xl mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10"
+        >
+          <div class="md:col-span-8">
+            <span
+              class="label-md uppercase tracking-[0.2em] text-primary font-semibold mb-4 block"
+              >Web Developer | Building Scalable Web Apps</span
+            >
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold tracking-tighter text-on-surface leading-[1.1] mb-6"
+            >
+              Isaac
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-br from-primary via-primary-container to-secondary-dim"
+                >Reang</span
+              >
+            </h1>
+            <p
+              class="text-lg md:text-xl text-on-surface-variant max-w-2xl font-body font-light leading-relaxed mb-10"
+            >
+              I build fast, user-focused, and scalable web applications.
+              Bridging the gap between creative interfaces and robust backend
+              architectures.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                class="btn-primary px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-full font-bold"
+                href="#projects" 
+                rel="noopener noreferrer"
+              >
+                View Projects
+                <span
+                  class="material-symbols-outlined"
+                  data-icon="arrow_forward"
+                  aria-hidden="true"
+                  >arrow_forward</span
+                >
+              </a>
+              <a
+                class="btn-secondary px-8 py-4 text-on-surface rounded-full font-bold"
+                href="#contact"
+                rel="noopener noreferrer"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+          <div class="md:col-span-4 hidden md:block">
+            <div
+              class="aspect-square relative rounded-full p-1 bg-gradient-to-tr from-primary/30 to-transparent"
+            >
+              <img
+                loading="lazy" 
+                alt="Isaac Reang"
+                class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700"
+                src="/img/my profile.jpeg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section class="py-24 bg-surface-container-low fade-in" id="about">
+        <div
+          class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+        >
+          <div>
+            <h2 class="text-3xl font-headline font-bold mb-8 text-on-surface">
+              Precision in Craft
+            </h2>
+            <div
+              class="space-y-6 text-on-surface-variant font-body leading-relaxed"
+            >
+              <p>
+                My journey in web development is defined by a relentless pursuit
+                of technical mastery. I specialize in crafting seamless user
+                experiences with modern
+                <span class="text-primary font-semibold">Frontend</span>
+                frameworks while ensuring high-performance
+                <span class="text-secondary font-semibold">Backend</span> logic.
+              </p>
+              <p>
+                Currently, I am deep-diving into
+                <span class="text-tertiary-dim"
+                  >Data Structures &amp; Algorithms</span
+                >
+                and <span class="text-tertiary-dim">System Design</span>,
+                perfecting the blueprint for applications that don't just work,
+                but scale efficiently under pressure.
+              </p>
+              <div class="pt-4 flex gap-4">
+                <div class="flex flex-col">
+                  <span class="text-2xl font-bold text-on-surface">5+</span>
+                  <span class="text-xs uppercase tracking-widest text-outline"
+                    >Projects Built</span
+                  >
+                </div>
+                <div class="w-px h-12 bg-outline-variant"></div>
+                <div class="flex flex-col">
+                  <span class="text-2xl font-bold text-on-surface">100%</span>
+                  <span class="text-xs uppercase tracking-widest text-outline"
+                    >Self-Taught Passion</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="glass-card p-8 rounded-xl border border-outline-variant/10"
+          >
+            <h3
+              class="text-xl font-headline font-semibold mb-6 flex items-center gap-2"
+            >
+              <span
+                class="material-symbols-outlined text-primary"
+                data-icon="history_edu"
+                aria-hidden="true"
+                >history_edu</span
+              >
+              The Journey
+            </h3>
+            <ul class="space-y-8">
+              <li class="relative pl-8">
+                <div
+                  class="absolute left-0 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-primary/20"
+                ></div>
+                <span class="label-md block text-outline mb-1"
+                  >CURRENT FOCUS</span
+                >
+                <h4 class="text-on-surface font-semibold">
+                  DSA &amp; System Design Mastery
+                </h4>
+                <p class="text-sm text-on-surface-variant">
+                  Optimizing logic and architecting enterprise-ready backends.
+                </p>
+              </li>
+              <li class="relative pl-8">
+                <div
+                  class="absolute left-0 top-1 w-3 h-3 rounded-full bg-outline-variant"
+                ></div>
+                <span class="label-md block text-outline mb-1">FOUNDATION</span>
+                <h4 class="text-on-surface font-semibold">
+                  Fullstack Application Developer
+                </h4>
+                <p class="text-sm text-on-surface-variant">
+                  Transitioned from basic HTML to complex API ecosystems with
+                  Flask.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Skills Section -->
+      <section class="py-24 fade-in" id="skills">
+        <div class="max-w-7xl mx-auto px-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16"
+          >
+            <div>
+              <h2 class="text-4xl font-headline font-extrabold mb-4">
+                Technical Arsenal
+              </h2>
+              <p class="text-on-surface-variant max-w-md">
+                A curated stack of tools and technologies I use to bring digital
+                ideas to life.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="p-8 bg-surface-container-high rounded-xl hover:bg-surface-bright transition-all group border border-outline-variant/5"
+            >
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-primary"
+                  data-icon="developer_board"
+                  aria-hidden="true"
+                  >developer_board</span
+                >
+              </div>
+              <h3 class="text-lg font-bold mb-4">Frontend</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >HTML5</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >CSS3</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >Tailwind</span
+                >
+              </div>
+            </div>
+            <div
+              class="p-8 bg-surface-container-high rounded-xl hover:bg-surface-bright transition-all group border border-outline-variant/5"
+            >
+              <div
+                class="w-12 h-12 bg-secondary-dim/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary-dim"
+                  data-icon="database"
+                  aria-hidden="true"
+                  >database</span
+                >
+              </div>
+              <h3 class="text-lg font-bold mb-4">Backend</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >Flask</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >REST APIs</span
+                >
+              </div>
+            </div>
+            <div
+              class="p-8 bg-surface-container-high rounded-xl hover:bg-surface-bright transition-all group border border-outline-variant/5"
+            >
+              <div
+                class="w-12 h-12 bg-tertiary-dim/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-tertiary-dim"
+                  data-icon="storage"
+                  aria-hidden="true"
+                  >storage</span
+                >
+              </div>
+              <h3 class="text-lg font-bold mb-4">Storage</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >Redis</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >SQL</span
+                >
+              </div>
+            </div>
+            <div
+              class="p-8 bg-surface-container-high rounded-xl hover:bg-surface-bright transition-all group border border-outline-variant/5"
+            >
+              <div
+                class="w-12 h-12 bg-on-secondary-fixed-variant/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+              >
+                <span
+                  class="material-symbols-outlined text-on-secondary-fixed-variant"
+                  data-icon="handyman"
+                  aria-hidden="true"
+                  >handyman</span
+                >
+              </div>
+              <h3 class="text-lg font-bold mb-4">Tools</h3>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >Git</span
+                >
+                <span
+                  class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-on-surface-variant"
+                  >VS Code</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Projects Section -->
+      <section class="py-24 bg-surface-container-low fade-in" id="projects">
+        <div class="max-w-7xl mx-auto px-8">
+          <h2 class="text-4xl font-headline font-extrabold mb-16 text-center">
+            Featured Projects
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div
+              class="lg:col-span-12 group relative overflow-hidden rounded-2xl bg-surface-container h-[500px]"
+            >
+              <img
+                loading="lazy"
+                alt="Reang Translator"
+                class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000"
+                src="/img/project-1.png"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent flex flex-col justify-end p-12"
+              >
+                <div class="max-w-2xl">
+                  <span
+                    class="px-4 py-1 bg-primary text-on-primary text-xs font-bold rounded-full uppercase tracking-wider mb-4 inline-block"
+                    >Flagship Application</span
+                  >
+                  <h3 class="text-4xl font-headline font-extrabold mb-4">
+                    Reang Translator Web App
+                  </h3>
+                  <p class="text-lg text-on-surface-variant mb-6">
+                    A full-stack web application built to preserve and translate
+                    the Reang language. Designed to bring a local community into
+                    the digital space with real-time translation, custom
+                    dictionary handling, and a scalable backend architecture.
+                  </p>
+                  <div class="flex flex-wrap gap-3 mb-8">
+                    <span
+                      class="text-xs font-label text-primary-fixed border border-primary/20 px-3 py-1 rounded-lg"
+                      >Flask</span
+                    >
+                    <span
+                      class="text-xs font-label text-primary-fixed border border-primary/20 px-3 py-1 rounded-lg"
+                      >Python</span
+                    >
+                    <span
+                      class="text-xs font-label text-primary-fixed border border-primary/20 px-3 py-1 rounded-lg"
+                      >PostgreSQL</span
+                    >
+                    <span
+                      class="text-xs font-label text-primary-fixed border border-primary/20 px-3 py-1 rounded-lg"
+                      >JS API</span
+                    >
+                  </div>
+                  <div class="flex gap-4">
+                    <a
+                      class="flex items-center gap-2 font-bold text-primary hover:underline"
+                      href="https://kaubru-translator-5.onrender.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Reang Translator live demo in a new tab"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        data-icon="link"
+                        aria-hidden="true"
+                        >link</span
+                      >
+                      Live Demo
+                    </a>
+                    <span
+                      class="flex items-center gap-2 font-bold text-on-surface-variant/70 cursor-not-allowed"
+                      aria-label="Source code is not publicly available"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        data-icon="lock"
+                        aria-hidden="true"
+                        >lock</span
+                      >
+                      Private Repository
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:col-span-6 bg-surface-container-high rounded-2xl overflow-hidden group border border-outline-variant/10"
+            >
+              <div class="h-64 overflow-hidden relative">
+                <img
+                  loading="lazy"
+                  alt="Preview of the Nova Agency landing page project"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  src="/img/project-2.png"
+                />
+                <div
+                  class="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-colors"
+                ></div>
+              </div>
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-3">
+                  Nova Agency Landing Page
+                </h3>
+                <p class="text-on-surface-variant mb-6">
+                  A modern, high-converting landing page with smooth animations
+                  and responsive design focused on clean UI/UX.
+                </p>
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-2">
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >HTML</span
+                    >
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >Tailwind</span
+                    >
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >JS</span
+                    >
+                  </div>
+                  <a
+                    href="https://nova-agency-landing-page.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Nova Agency Landing Page in a new tab"
+                  >
+                    <span
+                      class="material-symbols-outlined text-outline group-hover:text-primary transition-colors"
+                      aria-hidden="true"
+                    >
+                      arrow_outward
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:col-span-6 bg-surface-container-high rounded-2xl overflow-hidden group border border-outline-variant/10"
+            >
+              <div class="h-64 overflow-hidden relative">
+                <img
+                  loading="lazy"
+                  alt="Preview of the GitHub User Search project"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  src="/img/project-3.png"
+                />
+                <div
+                  class="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-colors"
+                ></div>
+              </div>
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-3">GitHub User Search</h3>
+                <p class="text-on-surface-variant mb-6">
+                  A dynamic web app that fetches and displays GitHub user data
+                  using public APIs with real-time search functionality.
+                </p>
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-2">
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >API</span
+                    >
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >CSS</span
+                    >
+                  </div>
+                  <a
+                    href="https://ephemeral-meerkat-defa4a.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open GitHub User Search project in a new tab"
+                  >
+                    <span
+                      class="material-symbols-outlined text-outline group-hover:text-primary transition-colors"
+                      aria-hidden="true"
+                    >
+                      arrow_outward
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="lg:col-span-6 bg-surface-container-high rounded-2xl overflow-hidden group border border-outline-variant/10"
+            >
+              <div class="h-64 overflow-hidden relative">
+                <img
+                  loading="lazy"
+                  alt="Preview of the Health Tool Calculator project"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  src="/img/project-4.png"
+                />
+                <div
+                  class="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-colors"
+                ></div>
+              </div>
+              <div class="p-8">
+                <h3 class="text-2xl font-bold mb-3">Health Tool Calculator</h3>
+                <p class="text-on-surface-variant mb-6">
+                  A simple and intuitive web app that provides quick
+                  health-related calculations with a clean user interface.
+                </p>
+                <div class="flex justify-between items-center">
+                  <div class="flex gap-2">
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="text-[10px] bg-surface p-1 px-2 rounded uppercase text-outline"
+                      >UI</span
+                    >
+                  </div>
+                  <a
+                    href="https://health-tool-calculator.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Open Health Tool Calculator in a new tab"
+                  >
+                    <span
+                      class="material-symbols-outlined text-outline group-hover:text-primary transition-colors"
+                      aria-hidden="true"
+                    >
+                      arrow_outward
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="py-24 fade-in" id="contact">
+        <div class="max-w-7xl mx-auto px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <h2 class="text-4xl font-headline font-extrabold mb-6">
+                Let's Build Something<br /><span class="text-primary"
+                  >Exceptional.</span
+                >
+              </h2>
+              <p class="text-on-surface-variant mb-10 max-w-sm">
+                I'm open to freelance projects, collaborations, or just a quick
+                chat about your ideas.
+              </p>
+              <div class="space-y-6">
+                <a
+                  class="flex items-center gap-4 text-on-surface group"
+                  href="mailto:isaacreang05@gmail.com"
+                  rel="noopener noreferrer"
+                >
+                  <div
+                    class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors"
+                  >
+                    <span
+                      class="material-symbols-outlined"
+                      data-icon="mail"
+                      aria-hidden="true"
+                      >mail</span
+                    >
+                  </div>
+                  <span>isaacreang05@gmail.com</span>
+                </a>
+              </div>
+            </div>
+            <div
+              class="glass-card p-8 rounded-2xl border border-outline-variant/10"
+            >
+              <form
+                action="https://formspree.io/f/xvzdrzvp"
+                class="space-y-6"
+                method="POST"
+                accept-charset="UTF-8"
+              >
+                <div class="space-y-2">
+                  <label
+                    class="label-md uppercase tracking-wider text-outline"
+                    for="full-name"
+                    >Full Name</label
+                  >
+                  <input
+                    id="full-name"
+                    name="name"
+                    class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-0 rounded-lg py-3 px-4 text-on-surface transition-colors placeholder:text-outline-variant/50"
+                    placeholder="John Doe"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="label-md uppercase tracking-wider text-outline"
+                    for="email-address"
+                    >Email Address</label
+                  >
+                  <input
+                    id="email-address"
+                    name="email"
+                    class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-0 rounded-lg py-3 px-4 text-on-surface transition-colors placeholder:text-outline-variant/50"
+                    placeholder="john@example.com"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="label-md uppercase tracking-wider text-outline"
+                    for="message"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="w-full bg-surface-container-lowest border-outline-variant/20 focus:border-primary focus:ring-0 rounded-lg py-3 px-4 text-on-surface transition-colors placeholder:text-outline-variant/50"
+                    placeholder="How can I help you?"
+                    autocomplete="off"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <input
+                  type="text"
+                  name="_gotcha"
+                  tabindex="-1"
+                  autocomplete="off"
+                  class="hidden"
+                  aria-hidden="true"
+                />
+                <button
+                  class="btn-primary w-full py-4 bg-gradient-to-r from-primary to-primary-container text-white font-bold rounded-lg"
+                  type="submit"
+                >
+                  Send Message
+                  <span
+                    class="material-symbols-outlined"
+                    data-icon="send"
+                    aria-hidden="true"
+                    >send</span
+                  >
+                </button>
+              </form>
+            </div>
+            <a
+              href="https://wa.me/917085700593?text=Hi%20I%20want%20more%20direct%20bookings"
+              target="_blank"
+              class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition z-50 flex items-center justify-center"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="white"
+              >
+                <path
+                  d="M20.52 3.48A11.78 11.78 0 0012.05 0C5.4 0 .04 5.36.04 12c0 2.11.55 4.17 1.6 5.98L0 24l6.19-1.61A11.96 11.96 0 0012.05 24c6.65 0 12.01-5.36 12.01-12 0-3.2-1.25-6.21-3.54-8.52zM12.05 21.82c-1.81 0-3.59-.49-5.14-1.42l-.37-.22-3.67.95.98-3.58-.24-.37A9.77 9.77 0 012.28 12c0-5.38 4.38-9.76 9.77-9.76 2.61 0 5.07 1.02 6.92 2.87a9.72 9.72 0 012.85 6.89c0 5.39-4.38 9.82-9.77 9.82zm5.38-7.32c-.29-.15-1.72-.85-1.99-.94-.27-.1-.47-.15-.66.15-.2.29-.76.94-.93 1.13-.17.2-.34.22-.63.07-.29-.15-1.21-.45-2.31-1.44-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.66-1.6-.91-2.19-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.51.07-.77.37-.27.29-1.03 1.01-1.03 2.47 0 1.45 1.06 2.85 1.21 3.05.15.2 2.08 3.18 5.05 4.46.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.09 1.72-.7 1.97-1.37.24-.67.24-1.25.17-1.37-.07-.12-.27-.2-.56-.34z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer relative w-full py-16 border-t overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#9492ff]/10 blur-[120px]"
+        ></div>
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-8">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-10 mb-12">
+          <div class="space-y-4 max-w-sm">
+            <div class="site-footer-brand flex items-center gap-2 font-bold text-lg">
+              <img
+                src="/img/portfolio-logo.png"
+                class="h-8 w-auto"
+                loading="lazy"
+                alt="Isaac Reang logo"
+              />
+              Isaac Reang
+            </div>
+            <p class="site-footer-description text-sm leading-relaxed">
+              Building scalable web applications with clean UI and solid backend architecture.
+            </p>
+          </div>
+
+          <div class="flex gap-16">
+            <div>
+              <h4 class="site-footer-title font-semibold mb-4 text-sm uppercase tracking-wider">
+                Navigation
+              </h4>
+              <div class="flex flex-col gap-3 text-sm">
+                <a href="#about" class="footer-link" rel="noopener noreferrer">About</a>
+                <a href="#projects" class="footer-link" rel="noopener noreferrer">Projects</a>
+                <a href="#skills" class="footer-link" rel="noopener noreferrer">Skills</a>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="site-footer-title font-semibold mb-4 text-sm uppercase tracking-wider">
+                Connect
+              </h4>
+              <div class="flex flex-col gap-3 text-sm">
+                <a href="https://github.com/Gigachad0456" class="footer-link" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/isaac-reang-261936236/" class="footer-link" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#contact" class="footer-link" rel="noopener noreferrer">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="site-footer-copy flex flex-col md:flex-row justify-between items-center pt-6 border-t border-[#3b476b]/10 text-sm">
+          <p>&copy; 2026 Isaac Reang. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
